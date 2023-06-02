@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name">
+    <button onclick="checkName()">Submit</button>
+</form>
+<script>
+    function checkName() {
+        let name = document.getElementById("name").value
+
+        if (name !== "") {
+            return document.write("One for " + name + ", one for me")
+        } else {
+            return document.write("One for you,one for me")
+
+        }
+    }
+</script>
+</body>
+</html>
