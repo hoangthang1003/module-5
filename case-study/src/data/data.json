@@ -1,0 +1,154 @@
+{
+  "customer": [
+    {
+      "name": "Rashford",
+      "gender": 1,
+      "dataOfBirth": "15-2-1997",
+      "idCard": "121212125",
+      "phone": "0902212362",
+      "email": "gea@gmail.com",
+      "address": "Quang nam",
+      "customerType": 1,
+      "id": 1
+    },
+    {
+      "name": "Rashford",
+      "gender": 1,
+      "dataOfBirth": "15-2-1997",
+      "idCard": "121212125",
+      "phone": "0902212362",
+      "email": "gea@gmail.com",
+      "address": "Quang nam",
+      "customerType": 2,
+      "id": 1
+    },
+    {
+      "name": "Rashford",
+      "gender": 1,
+      "dataOfBirth": "15-2-1997",
+      "idCard": "121212125",
+      "phone": "0902212362",
+      "email": "gea@gmail.com",
+      "address": "Quang nam",
+      "customerType": 1,
+      "id": 1
+    },
+    {
+      "name": "Rashford",
+      "gender": 1,
+      "dataOfBirth": "15-2-1997",
+      "idCard": "121212125",
+      "phone": "0902212362",
+      "email": "gea@gmail.com",
+      "address": "Quang nam",
+      "customerType": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "akira phan",
+      "gender": 1,
+      "dataOfBirth": "15-2-1997",
+      "idCard": "206062903",
+      "phone": "0900000000",
+      "email": "duapkaiemckuatung@gmail.com",
+      "address": "Yokohama",
+      "customerType": 1
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Plantinium"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "gender": [
+    {
+      "id": 1,
+      "name": "Men"
+    },
+    {
+      "id": 2,
+      "name": "Girl"
+    },
+    {
+      "id": 3,
+      "name": "LGBT"
+    }
+  ],
+  "facilitiesList": [
+    {
+      "id": 2,
+      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "facilityName": "Deluxe Room",
+      "facilityArea": "Diện tích phòng: 85.8 m2",
+      "facilityRentalCost": "20000",
+      "facitilyMaxPeople": "5",
+      "facilityRentalType": "Ngày",
+      "facilityTypeId": 1,
+      "facilityStandard": "vip",
+      "facilityOtherAminities": "Thuê xe máy / xe đạp",
+      "facilityPoolArea": "12",
+      "facilityNumbOfFloor": "3",
+      "facilityFreeAminities": null,
+      "facilityAminitiesid": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 4,
+      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "facilityName": "Deluxe Room",
+      "facilityArea": "Diện tích phòng: 85.8 m2",
+      "facilityRentalCost": "20000",
+      "facitilyMaxPeople": "5",
+      "facilityRentalType": "Ngày",
+      "facilityTypeId": 1,
+      "facilityStandard": "vip",
+      "facilityOtherAminities": "Thuê xe máy / xe đạp",
+      "facilityPoolArea": "12",
+      "facilityNumbOfFloor": "3",
+      "facilityFreeAminities": null,
+      "facilityAminitiesid": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 6,
+      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "facilityName": "Deluxe Room",
+      "facilityArea": "Diện tích phòng: 85.8 m2",
+      "facilityRentalCost": "20000",
+      "facitilyMaxPeople": "5",
+      "facilityRentalType": "Ngày",
+      "facilityTypeId": 1,
+      "facilityStandard": "vip",
+      "facilityOtherAminities": "Thuê xe máy / xe đạp",
+      "facilityPoolArea": "12",
+      "facilityNumbOfFloor": "3",
+      "facilityFreeAminities": null,
+      "facilityAminitiesid": [
+        1,
+        2
+      ]
+    }
+  ]
+}
