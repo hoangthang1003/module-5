@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="apple-touch-icon" type="image/png"
+          href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"/>
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+          href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"/>
+
+    <link rel="mask-icon" type="image/x-icon"
+          href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+          color="#111"/>
+
+
+    <title>CodePen - Abstract Sign Up Form - Day 2 - 100 DAYS - 2020</title>
+
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Fjalla+One&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") center center no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .contact-us {
+            background: #f8f4e5;
+            padding: 50px 100px;
+            border: 2px solid black;
+            box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            font-size: 14pt;
+            line-height: 28pt;
+            font-family: "Fjalla One";
+            margin-bottom: 28pt;
+            border: none;
+            border-bottom: 5px solid black;
+            background: #f8f4e5;
+            min-width: 250px;
+            padding-left: 5px;
+            outline: none;
+            color: black;
+        }
+
+        input:focus {
+            border-bottom: 5px solid #ffa580;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            line-height: 28pt;
+            padding: 0 20px;
+            background: #ffa580;
+            letter-spacing: 2px;
+            transition: 0.2s all ease-in-out;
+            outline: none;
+            border: 1px solid black;
+            box-shadow: 3px 3px 1px 1px #95a4ff, 3px 3px 1px 2px black;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+            border: 1px solid black;
+        }
+
+        ::selection {
+            background: #ffc8ff;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus {
+            border-bottom: 5px solid #95a4ff;
+            -webkit-text-fill-color: #2A293E;
+            -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) {
+        };
+    </script>
+
+
+</head>
+
+<body translate="no">
+<div class="contact-us">
+    <form>
+        <label for="idContract">Mã hợp đồng:</label>
+        <input type="text" id="idContract" name="idContract" required>
+
+        <label for="startDay">Ngày bắt đầu:</label>
+        <input type="date" id="startDay" name="startDay" required>
+
+        <label for="endDay">Ngày kết thúc:</label>
+        <input type="date" id="endDay" name="endDay" required>
+
+        <label for="money">Số tiền cọc trước:</label>
+        <input type="text" id="money" name="money" required>
+
+        <label for="total">Tổng số tiền thanh toán:</label>
+        <input type="text" id="total" name="total" required>
+
+        <input type="submit" value="Gửi">
+    </form>
+</div>
+
+
+</body>
+
+</html>
