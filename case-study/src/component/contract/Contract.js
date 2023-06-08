@@ -12,11 +12,10 @@ export function ContractList() {
     }, [])
     return (
         <>
-            <table>
+            <table className={"table table-info"}>
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name Contract</th>
                     <th>Customer Name</th>
                     <th>Facility</th>
                     <th>Start Date</th>
@@ -29,8 +28,8 @@ export function ContractList() {
                     contracts.map((contract,index)=>(
                         <tr key={index}>
                             <td>{contract.idContract}</td>
-                            <td>{contract.customer}</td>
-                            <td>{contract.facility}</td>
+                            <td>{contract.customer?.name}</td>
+                            <td>{contract.facility?.facilityName}</td>
                             <td>{contract.startDate}</td>
                             <td>{contract.endDate}</td>
                             <td>{contract.deposit}</td>

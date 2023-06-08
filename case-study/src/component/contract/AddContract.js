@@ -1,9 +1,9 @@
 import React from "react";
 import {Field, Form, Formik} from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 
 export function AddContract() {
-
 return(
     <>
         <Formik initialValues={{
@@ -24,7 +24,12 @@ return(
                     totalMoney: Yup.string().required("Required"),
                 })}
 
-                onSubmit={}>
+                onSubmit={values => {
+                    const addContract = async () => {
+                        await axios.put(`http://localhost:2000/contract`,{...values})
+                    }
+                    addContract()
+                }}>
             <div className="contact-us">
                 <h1>Add Contract</h1>
                 <Form>
