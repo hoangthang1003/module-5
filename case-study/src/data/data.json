@@ -20,7 +20,7 @@
       "email": "gea@gmail.com",
       "address": "Quang nam",
       "customerType": 2,
-      "id": 1
+      "id": 2
     },
     {
       "name": "Rashford",
@@ -31,7 +31,7 @@
       "email": "gea@gmail.com",
       "address": "Quang nam",
       "customerType": 1,
-      "id": 1
+      "id": 3
     },
     {
       "name": "Rashford",
@@ -42,15 +42,15 @@
       "email": "gea@gmail.com",
       "address": "Quang nam",
       "customerType": 1,
-      "id": 1
+      "id": 4
     },
     {
-      "id": 2,
+      "id": 5,
       "name": "akira phan",
       "gender": 1,
       "dataOfBirth": "15-2-1997",
       "idCard": "206062903",
-      "phone": "0900000000",
+      "phone": "0900000 q000",
       "email": "duapkaiemckuatung@gmail.com",
       "address": "Yokohama",
       "customerType": 1
@@ -94,7 +94,7 @@
   ],
   "facilitiesList": [
     {
-      "id": 2,
+      "id": 1,
       "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
       "facilityName": "Deluxe Room",
       "facilityArea": "Diện tích phòng: 85.8 m2",
@@ -149,6 +149,19 @@
         1,
         2
       ]
+    }
+  ],
+  "contract": [
+    {
+      "idContract": 1,
+      "customer": 1,
+      "facility": 1,
+      "numberOfGuests": 10,
+      "startDate": "10-03-2004",
+      "endDate": "10-03-2104",
+      "idRoom": 3,
+      "deposit": "10000000",
+      "total": "10000000"
     }
   ]
 }

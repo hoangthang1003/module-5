@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {findAll} from "../../service/CustomerService";
 
 export function CustomerList() {
     const [customers,setCustomers] = useState([])
-    const [idDelete,setIdDelete]= useState(null)
-    const [nameDelete,setNameDelete]= useState(null)
+    // const [idDelete,setIdDelete]= useState(null)
+    // const [nameDelete,setNameDelete]= useState(null)
     const customerList = async () => {
         const result = await findAll()
         setCustomers(result)
