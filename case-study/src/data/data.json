@@ -67,7 +67,7 @@
     },
     {
       "id": 3,
-      "name": "Plantinium"
+      "name": "Platinum"
     },
     {
       "id": 4,
@@ -92,63 +92,96 @@
       "name": "LGBT"
     }
   ],
-  "facilitiesList": [
+  "facility": [
+    {
+      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "id": 1,
+      "name": "Bơi lội",
+      "area": 100,
+      "cost": 50,
+      "maxPeople": 20,
+      "facilityType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "VND"
+      },
+      "standardRoom": "Twin bedroom",
+      "description": "Tốt",
+      "poolArea": 50,
+      "numberOfFloors": 3,
+      "facilityFree": "đồ bơi, kính bơi",
+      "status": false
+    },
+    {
+      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "id": 2,
+      "name": "Bơi lội",
+      "area": 100,
+      "cost": 50,
+      "maxPeople": 20,
+      "facilityType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "VND"
+      },
+      "standardRoom": "Twin bedroom",
+      "description": "Tốt",
+      "poolArea": 50,
+      "numberOfFloors": 3,
+      "facilityFree": "đồ bơi, kính bơi",
+      "status": false
+    },
+    {
+      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "id": 3,
+      "name": "Bơi lội",
+      "area": 100,
+      "cost": 50,
+      "maxPeople": 20,
+      "facilityType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "VND"
+      },
+      "standardRoom": "Twin bedroom",
+      "description": "Tốt",
+      "poolArea": 50,
+      "numberOfFloors": 3,
+      "facilityFree": "đồ bơi, kính bơi",
+      "status": false
+    }
+  ],
+  "facilityType": [
     {
       "id": 1,
-      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
-      "facilityName": "Deluxe Room",
-      "facilityArea": "Diện tích phòng: 85.8 m2",
-      "facilityRentalCost": "20000",
-      "facitilyMaxPeople": "5",
-      "facilityRentalType": "Ngày",
-      "facilityTypeId": 1,
-      "facilityStandard": "vip",
-      "facilityOtherAminities": "Thuê xe máy / xe đạp",
-      "facilityPoolArea": "12",
-      "facilityNumbOfFloor": "3",
-      "facilityFreeAminities": null,
-      "facilityAminitiesid": [
-        1,
-        2
-      ]
+      "name": "Diamond"
     },
     {
-      "id": 4,
-      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
-      "facilityName": "Deluxe Room",
-      "facilityArea": "Diện tích phòng: 85.8 m2",
-      "facilityRentalCost": "20000",
-      "facitilyMaxPeople": "5",
-      "facilityRentalType": "Ngày",
-      "facilityTypeId": 1,
-      "facilityStandard": "vip",
-      "facilityOtherAminities": "Thuê xe máy / xe đạp",
-      "facilityPoolArea": "12",
-      "facilityNumbOfFloor": "3",
-      "facilityFreeAminities": null,
-      "facilityAminitiesid": [
-        1,
-        2
-      ]
+      "id": 2,
+      "name": "Gold"
     },
     {
-      "id": 6,
-      "facilityImg": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
-      "facilityName": "Deluxe Room",
-      "facilityArea": "Diện tích phòng: 85.8 m2",
-      "facilityRentalCost": "20000",
-      "facitilyMaxPeople": "5",
-      "facilityRentalType": "Ngày",
-      "facilityTypeId": 1,
-      "facilityStandard": "vip",
-      "facilityOtherAminities": "Thuê xe máy / xe đạp",
-      "facilityPoolArea": "12",
-      "facilityNumbOfFloor": "3",
-      "facilityFreeAminities": null,
-      "facilityAminitiesid": [
-        1,
-        2
-      ]
+      "id": 3,
+      "name": "Silver"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "VND"
+    },
+    {
+      "id": 1,
+      "name": "USD"
     }
   ],
   "contract": [
@@ -160,7 +193,7 @@
       },
       "facility": {
         "id": 1,
-        "facilityName": "Deluxy room"
+        "facilityName": "luxury room"
       },
       "numberOfGuests": 10,
       "startDate": "10-03-2004",
