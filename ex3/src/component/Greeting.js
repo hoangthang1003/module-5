@@ -1,33 +1,27 @@
-import React, {useState} from "react";
-import { Field, Form, Formik} from 'formik';
+import React, {useEffect, useState} from "react";
 
 
 export function Greeting() {
-    const [firstName,setFirstName] = useState("")
-    const [lastName,setLastName] = useState("")
+    const [firstName,setFirstName] = useState(localStorage.getItem('firstName')|| '')
+    const [lastName,setLastName] = useState(localStorage.getItem('lastName')|| '')
+    useEffect(()=>{
+        localStorage.setItem('firstName',firstName)
+        localStorage.setItem('lastName',lastName)
+    },[firstName,lastName])
     return(
         <>
-        <Formik initialValues={{firstName:'',lastName:''}}
-                onSubmit={values => {
-                    const handleChange = () => {
-                        setFirstName(values.firstName)
-                        setLastName(values.lastName)
-                    }
-                    handleChange()
-                }}>
-            <Form>
+
+            <form>
                 <div>
                     <label htmlFor="firstName">First Name</label>
-                    <Field id="firstName" name="firstName"/>
+                    <input  onChange={(e)=>setFirstName(e.target.value)} value={firstName}/>
                 </div>
-                <br/>
                 <div>
-                    <label htmlFor="lastName">First Name</label>
-                    <Field id="lastName" name="lastName"/>
+                    <label htmlFor="lastName">Last Name</label>
+                    <input  onChange={(e)=>setLastName(e.target.value)} value={lastName}/>
                 </div>
                 <button type={"submit"}>Click</button>
-            </Form>
-        </Formik>
+            </form>
 
             <div>
                 <li>{firstName}</li>

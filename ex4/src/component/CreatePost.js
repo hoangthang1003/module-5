@@ -5,7 +5,8 @@ export function createPost() {
 
     return (
         <>
-            <Formik initialValues={{title:'',thumbnail_url:'',slug:'',category:''}}>
+            <Formik initialValues={{title:'',thumbnail_url:'',slug:'',category:''}}
+                    onSubmit={}>
                 <Form>
                     <div>
                         <label htmlFor="title">Title</label>
