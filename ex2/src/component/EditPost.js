@@ -10,8 +10,7 @@ export function EditPost() {
     const navigate = useNavigate();
     const findById = async () => {
         const result = await getPostById(param.id)
-        debugger
-        console.log(result)
+
         setPost(result)
     }
     useEffect(() => {
