@@ -35,7 +35,7 @@ export function AddPost() {
                         )}
                     onSubmit={(values => {
                         const slug = slugify(values.title, {lower: true, strict: true})
-                        const addPost = async () => {
+                        const addBlog = async () => {
                             await addPost({...values, slug})
                             navigate("/")
                         };
