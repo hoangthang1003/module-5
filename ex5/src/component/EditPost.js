@@ -3,6 +3,7 @@ import React, {useEffect, useState} from "react";
 import {editPost, getPostById} from "../service/PostService";
 import {Field, Form, Formik} from "formik";
 import slugify from "slugify";
+import * as Yup from "yup";
 
 
 export function EditPost() {
@@ -31,6 +32,16 @@ export function EditPost() {
                 author: post?.author,
                 authorEmail: post?.authorEmail
             }}
+                    validationSchema={Yup.object({
+                        title: Yup.string().required(),
+                        slug: Yup.string().required(),
+                        category: Yup.string().required(),
+                        content: Yup.string().required(),
+                        updateAt: Yup.string().required(),
+                        author: Yup.string().required(),
+                        authorEmail: Yup.string().required().matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
+
+                    })}
                     onSubmit={values => {
                         const updatePost = async () => {
                             const slug = slugify(values.title, {lower: true, strict: true})

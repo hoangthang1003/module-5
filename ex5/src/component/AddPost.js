@@ -3,6 +3,7 @@ import React from "react";
 import {useNavigate} from "react-router";
 import slugify from "slugify";
 import {addPost} from "../service/PostService";
+import * as Yup from "yup";
 
 export function AddPost() {
     const navigate = useNavigate()
@@ -20,6 +21,16 @@ export function AddPost() {
     return(
         <>
         <Formik initialValues={{title:'',slug:'',category:'',content:'',updateAt:day ,author:'',authorEmail:''}}
+                validationSchema={Yup.object({
+                    title:Yup.string().required(),
+                    slug:Yup.string().required(),
+                    category:Yup.string().required(),
+                    content:Yup.string().required(),
+                    updateAt:Yup.string().required(),
+                    author:Yup.string().required(),
+                    authorEmail:Yup.string().required().matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")
+
+                })}
                 onSubmit={values => {
                     const newPost = async () => {
                        const slug = slugify(values.title,{lower:true,strict:true})
