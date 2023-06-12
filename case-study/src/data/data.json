@@ -34,6 +34,8 @@
       "customerType": "1"
     }
   ],
+
+
   "customerType": [
     {
       "id": "1",
@@ -74,7 +76,7 @@
     {
       "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
       "id": 1,
-      "name": "Bơi lội",
+      "name": "Phòng Vip",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -96,7 +98,7 @@
     {
       "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
       "id": 2,
-      "name": "Bơi lội",
+      "name": "Phòng Tổng thống",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -118,6 +120,28 @@
     {
       "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
       "id": 3,
+      "name": "Bơi lội",
+      "area": 100,
+      "cost": 50,
+      "maxPeople": 20,
+      "facilityType": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "rentType": {
+        "id": 1,
+        "name": "VND"
+      },
+      "standardRoom": "Twin bedroom",
+      "description": "Tốt",
+      "poolArea": 50,
+      "numberOfFloors": 3,
+      "facilityFree": "đồ bơi, kính bơi",
+      "status": false
+    }  ,
+    {
+      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "id": 4,
       "name": "Bơi lội",
       "area": 100,
       "cost": 50,

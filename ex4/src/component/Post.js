@@ -1,16 +1,20 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import {Link} from "react-router-dom";
+import {postService} from "../service/PostService";
 
 export function PostList() {
-const [posts,setPosts] = useState([])
+const [posts,setPosts] = useState(null)
+
+
     const findAll = async () => {
-    const result = await axios.get(`https://my-json-server.typicode.com/sonpham1591996/cg-blogs/posts`)
-        setPosts(result.data)
+    const result = await postService.findAllPost()
+        setPosts(result)
     }
     useEffect(()=>{
         findAll()
     },[])
+
+
     return(
         <>
             <Link to={"/create"}>Create</Link>

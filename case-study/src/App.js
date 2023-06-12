@@ -10,6 +10,10 @@ import Home from "./component/Home";
 import AddFacility from "./component/facility/AddFacility";
 import {EditCustomer} from "./component/customer/EditCustomer";
 import {CustomerList} from "./component/customer/Customer";
+import EditFacility from "./component/facility/EditFacility";
+import {Detail} from "./component/facility/Detail";
+import {ContractList} from "./component/contract/Contract";
+import {AddContract} from "./component/contract/AddContract";
 
 function App() {
     return (
@@ -21,7 +25,10 @@ function App() {
                 <Route path={"/facility"} element={<FacilityList/>}/>
                 <Route path={"/customer/edit/:id"}  element={<EditCustomer />}/>
                 <Route path={"/addFacility"} element={<AddFacility/>}/>
-                {/*<Route path={"/edit"} element={<AddFacility/>}/>*/}
+                <Route path={"/facilityEdit/:id"} element={<EditFacility/>}/>
+                <Route path={"/facility-detail/${facilities.id}"} element={<Detail/>}/>
+                <Route path={"/contract"} element={<ContractList/>}/>
+                <Route path={"/contract/create"} element={<AddContract/>}/>
             </Routes>
             <Footer/>
         </>

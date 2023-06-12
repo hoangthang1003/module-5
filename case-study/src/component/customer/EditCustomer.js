@@ -61,11 +61,14 @@ export function EditCustomer() {
                         <label htmlFor={"name"}>Name</label>
                         <Field id={"name"} name={"name"}/>
                     </div>
-                    {/*<div>*/}
-                    {/*    <label htmlFor="gender">gender</label>*/}
-                    {/*    <Field id="female" name="gender" type="radio" value="0">Nữ</Field>*/}
-                    {/*    <Field id="male" name="gender" type="radio" value="1">Nam</Field>*/}
-                    {/*</div>*/}
+                    <div>
+                        <label htmlFor="gender">Gender</label>
+                        <input id="female" name="gender" type="radio" value="0" />
+                        <label htmlFor="female">Nữ</label>
+                        <input id="male" name="gender" type="radio" value="1" />
+                        <label htmlFor="male">Nam</label>
+                    </div>
+
 
                     <div>
                         <label htmlFor={"dateOfBirth"}>dateOfBirth</label>

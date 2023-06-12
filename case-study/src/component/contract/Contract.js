@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export function ContractList() {
     const [contracts, setContract] = useState([])
@@ -12,6 +13,7 @@ export function ContractList() {
     }, [])
     return (
         <>
+            <Link to={"/contract/create"}  className={"btn btn-danger"}>Add</Link>
             <table className={"table table-info"}>
                 <thead>
                 <tr>

@@ -5,7 +5,7 @@ const findAll = () => {
 }
 
 const save = (blog) => {
-    return request.post("/posts",blog)
+    return request.post("/posts",{...blog})
 }
 
 export const blogService = {

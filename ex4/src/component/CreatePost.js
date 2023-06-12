@@ -1,12 +1,20 @@
 import {Field, Form, Formik} from "formik";
 import React from "react";
+import {postService} from "../service/PostService";
+import {useNavigate} from "react-router";
 
-export function createPost() {
-
+export function CreatePost() {
+const navigate = useNavigate()
     return (
         <>
-            <Formik initialValues={{title:'',thumbnail_url:'',slug:'',category:''}}
-                    onSubmit={}>
+            <Formik initialValues={{title: '', thumbnail_url: '', slug: '', category: ''}}
+                    onSubmit={values => {
+                        const addPost = async () => {
+                            await postService.addPost(values)
+                            navigate("/")
+                        }
+                        addPost()
+                    }}>
                 <Form>
                     <div>
                         <label htmlFor="title">Title</label>
@@ -24,7 +32,8 @@ export function createPost() {
                         <label htmlFor="category">category</label>
                         <Field id="category" name="category"/>
                     </div>
-                    
+                    <button type="submit">click</button>
+
                 </Form>
             </Formik>
         </>

@@ -36,22 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.img-size{
-  width: 200px;
-  height: 200px;
-}
-.item-navbar{
-  text-decoration: none;
-  color: mediumpurple;
-}
-.text{
-  color: #addccf;
-}
-.bg{
-  background-color: #25be8f;
-  background-image: url("https://cdn.pixabay.com/photo/2015/12/03/08/50/paper-1074131_1280.jpg");
-
-}
-.navbar-color{
-  background-color: #412b13;
-}
