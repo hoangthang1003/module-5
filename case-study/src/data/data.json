@@ -1,80 +1,58 @@
 {
   "customer": [
     {
+      "id": 1,
       "name": "Rashford",
+      "dateOfBirth": "15/2/1997",
       "gender": 1,
-      "dataOfBirth": "15-2-1997",
       "idCard": "121212125",
       "phone": "0902212362",
       "email": "gea@gmail.com",
       "address": "Quang nam",
-      "customerType": 1,
-      "id": 1
+      "customerType": "5"
     },
     {
+      "id": 2,
       "name": "Rashford",
+      "dateOfBirth": "15/02/1997",
       "gender": 1,
-      "dataOfBirth": "15-2-1997",
       "idCard": "121212125",
       "phone": "0902212362",
       "email": "gea@gmail.com",
       "address": "Quang nam",
-      "customerType": 2,
-      "id": 2
-    },
-    {
-      "name": "Rashford",
-      "gender": 1,
-      "dataOfBirth": "15-2-1997",
-      "idCard": "121212125",
-      "phone": "0902212362",
-      "email": "gea@gmail.com",
-      "address": "Quang nam",
-      "customerType": 1,
-      "id": 3
-    },
-    {
-      "name": "Rashford",
-      "gender": 1,
-      "dataOfBirth": "15-2-1997",
-      "idCard": "121212125",
-      "phone": "0902212362",
-      "email": "gea@gmail.com",
-      "address": "Quang nam",
-      "customerType": 1,
-      "id": 4
+      "customerType": "3"
     },
     {
       "id": 5,
       "name": "akira phan",
       "gender": 1,
-      "dataOfBirth": "15-2-1997",
+      "dateOfBirth": "15/02/1997",
       "idCard": "206062903",
       "phone": "0900000 q000",
       "email": "duapkaiemckuatung@gmail.com",
       "address": "Yokohama",
-      "customerType": 1
+      "customerType": "1"
     }
   ],
   "customerType": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Diamond"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Gold"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Platinum"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Silver"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Member"
     }
   ],

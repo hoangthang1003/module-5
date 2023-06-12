@@ -1,0 +1,2 @@
+export const GET_ALL_BLOG = "GET_ALL_STUDENT"
+export const CREATE_BLOG = "CREATE_STUDENT"

@@ -8,6 +8,8 @@ import Header from "./component/Header";
 import Footer from "./component/Footer";
 import Home from "./component/Home";
 import AddFacility from "./component/facility/AddFacility";
+import {EditCustomer} from "./component/customer/EditCustomer";
+import {CustomerList} from "./component/customer/Customer";
 
 function App() {
     return (
@@ -15,7 +17,9 @@ function App() {
             <Header/>
             <Routes>
                 <Route path={"/"} element={<Home/>}/>
+                <Route path={"/customer"} element={<CustomerList/>}/>
                 <Route path={"/facility"} element={<FacilityList/>}/>
+                <Route path={"/customer/edit/:id"}  element={<EditCustomer />}/>
                 <Route path={"/addFacility"} element={<AddFacility/>}/>
                 {/*<Route path={"/edit"} element={<AddFacility/>}/>*/}
             </Routes>

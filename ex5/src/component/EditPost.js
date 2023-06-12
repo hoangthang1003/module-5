@@ -9,7 +9,7 @@ import * as Yup from "yup";
 export function EditPost() {
     const navigate = useNavigate()
     const param = useParams()
-    const [post, setPost] = useState(null)
+    const [post, setPost] = useState("")
     const findById = async () => {
         const res = await getPostById(param.id)
         setPost(res)
@@ -53,7 +53,7 @@ export function EditPost() {
                 <Form>
                     <div>
                         <label>Title</label>
-                        <Field id="title" name="title"/>
+                        <Field  name="title"/>
                     </div>
 
                     <div>

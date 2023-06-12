@@ -4,6 +4,10 @@ export const findAll = async () => {
     const result = await axios.get(`http://localhost:2000/customer`)
     return result.data
 }
+export const findAllType = async () => {
+    const result = await axios.get(`http://localhost:2000/customerType`)
+    return result.data
+}
 export const deleteById = async (id) => {
     const result = await axios.delete(`http://localhost:2000/customer/${id}`)
     return result.data
@@ -19,4 +23,13 @@ export const editCustomer = async (id,value) => {
 export const findById = async (id) => {
     const result = await axios.get(`http://localhost:2000/customer/${id}`)
     return result.data
+}
+
+export const customerService = {
+    findById,
+    findAll,
+    editCustomer,
+    addCustomer,
+    deleteById,
+    findAllType
 }
