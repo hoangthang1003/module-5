@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {postService} from "../service/PostService";
 
 export function PostList() {
-const [posts,setPosts] = useState(null)
+const [posts,setPosts] = useState([])
 
 
     const findAll = async () => {
