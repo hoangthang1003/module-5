@@ -14,6 +14,7 @@ import EditFacility from "./component/facility/EditFacility";
 import {Detail} from "./component/facility/Detail";
 import {ContractList} from "./component/contract/Contract";
 import {AddContract} from "./component/contract/AddContract";
+import {AddCustomer} from "./component/customer/AddCustomer";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path={"/facility-detail/${facilities.id}"} element={<Detail/>}/>
                 <Route path={"/contract"} element={<ContractList/>}/>
                 <Route path={"/contract/create"} element={<AddContract/>}/>
+                <Route path={"/customer/addCustomer"} element={<AddCustomer/>}/>
             </Routes>
             <Footer/>
         </>

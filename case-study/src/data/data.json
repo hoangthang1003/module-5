@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Rashford",
       "dateOfBirth": "15/2/1997",
-      "gender": 1,
+      "gender": "1",
       "idCard": "121212125",
       "phone": "0902212362",
       "email": "gea@gmail.com",
@@ -15,27 +15,80 @@
       "id": 2,
       "name": "Rashford",
       "dateOfBirth": "15/02/1997",
-      "gender": 1,
+      "gender": "0",
       "idCard": "121212125",
       "phone": "0902212362",
       "email": "gea@gmail.com",
-      "address": "Quang nam",
+      "address": "Quang namqq",
       "customerType": "3"
     },
     {
       "id": 5,
       "name": "akira phan",
-      "gender": 1,
       "dateOfBirth": "15/02/1997",
+      "gender": "0",
       "idCard": "206062903",
       "phone": "0900000 q000",
       "email": "duapkaiemckuatung@gmail.com",
       "address": "Yokohama",
       "customerType": "1"
+    },
+    {
+      "id": 6,
+      "name": "123",
+      "dateOfBirth": "456",
+      "gender": "0",
+      "idCard": "123",
+      "phone": "4556",
+      "email": "456",
+      "address": "333",
+      "customerType": "3"
+    },
+    {
+      "id": 7,
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "0",
+      "idCard": "123",
+      "phone": "123",
+      "email": "123",
+      "address": "123",
+      "customerType": "3"
+    },
+    {
+      "id": 8,
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "1",
+      "idCard": "123",
+      "phone": "123",
+      "email": "123",
+      "address": "123",
+      "customerType": ""
+    },
+    {
+      "id": 9,
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "0",
+      "idCard": "123",
+      "phone": "123",
+      "email": "132",
+      "address": "123",
+      "customerType": "1"
+    },
+    {
+      "id": 10,
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "1",
+      "idCard": "132",
+      "phone": "123",
+      "email": "13",
+      "address": "123",
+      "customerType": "1"
     }
   ],
-
-
   "customerType": [
     {
       "id": "1",
@@ -138,7 +191,7 @@
       "numberOfFloors": 3,
       "facilityFree": "đồ bơi, kính bơi",
       "status": false
-    }  ,
+    },
     {
       "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
       "id": 4,

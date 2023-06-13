@@ -30,6 +30,7 @@ export function CustomerList() {
     }, [])
     return (
         <>
+            <Link to="/customer/addCustomer" className={"btn btn-warning"}>Add new</Link>
             <table className={"table table-dark"}>
                 <tr>
                     <th>ID</th>

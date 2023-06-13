@@ -1,44 +1,34 @@
-import {useNavigate, useParams} from "react-router";
 import React, {useEffect, useState} from "react";
 import {customerService} from "../../service/CustomerService";
 import {Field, Form, Formik} from "formik";
 import * as Yup from "yup";
+import {useNavigate} from "react-router";
 
-export function EditCustomer() {
-    const navigate = useNavigate()
-    const param = useParams();
-    const [customer, setCustomer] = useState("");
+export function AddCustomer() {
     const [customerTypes, setCustomerType] = useState([]);
-    const findById = async () => {
-        const res = await customerService.findById(param.id)
-        console.log(res)
-        setCustomer(res)
-    }
+    const navigate = useNavigate();
     const findAllType = async () => {
         const res = await customerService.findAllType()
         setCustomerType(res)
 
     }
     useEffect(() => {
-        findById()
         findAllType()
-    }, [param.id])
-    if (!customer) {
-        return null
-    }
+    }, [])
+
     return (
         <>
             <Formik
                 initialValues={{
-                    id: customer?.id,
-                    name: customer?.name,
-                    dateOfBirth: customer?.dateOfBirth,
-                    gender: customer?.gender,
-                    idCard: customer?.idCard,
-                    phone: customer?.phone,
-                    email: customer?.email,
-                    address: customer?.address,
-                    customerType: customer?.customerType
+                    id: '',
+                    name: '',
+                    dateOfBirth: '',
+                    gender: '',
+                    idCard: '',
+                    phone: '',
+                    email: '',
+                    address: '',
+                    customerType: "1"
                 }}
                 validationSchema={Yup.object({
                     name: Yup.string().required("REQUIRED_VALIDATION"),
@@ -51,7 +41,7 @@ export function EditCustomer() {
 
                 })}
                 onSubmit={(values) => {
-                    customerService.editCustomer(param.id, values)
+                    customerService.addCustomer(values)
                     navigate('/customer')
                 }
                 }
@@ -100,7 +90,7 @@ export function EditCustomer() {
                             }
                         </Field>
                     </div>
-                    <button type="submit" className={"btn btn-danger"}>Edit</button>
+                    <button type="submit" className={"btn btn-danger"}>Add</button>
                 </Form>
             </Formik>
         </>

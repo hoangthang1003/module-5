@@ -12,7 +12,7 @@ export const deleteById = async (id) => {
     const result = await axios.delete(`http://localhost:2000/customer/${id}`)
     return result.data
 }
-export const addCustomer = async (value) => {
+ const addCustomer = async (value) => {
     const result = await axios.post(`http://localhost:2000/customer`,{ ...value })
     return result.data
 }
