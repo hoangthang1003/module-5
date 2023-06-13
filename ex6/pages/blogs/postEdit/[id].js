@@ -1,9 +1,9 @@
 import slugify from "slugify";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {editPost, getPostById} from "../../mock-data/data";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import {useRouter} from "next/router";
-import "bootstrap/dist/css/bootstrap.css";
+
 import * as Yup from 'yup';
 import Link from "next/link";
 
