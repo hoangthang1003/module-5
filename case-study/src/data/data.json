@@ -127,9 +127,9 @@
   ],
   "facility": [
     {
-      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "img": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "id": 1,
-      "name": "Phòng Vip",
+      "name": "Villa Vip",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -149,9 +149,9 @@
       "status": false
     },
     {
-      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "img": "https://images.pexels.com/photos/2480608/pexels-photo-2480608.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "id": 2,
-      "name": "Phòng Tổng thống",
+      "name": "Villa Tổng thống",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -171,9 +171,9 @@
       "status": false
     },
     {
-      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "img": "https://images.pexels.com/photos/2525899/pexels-photo-2525899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "id": 3,
-      "name": "Bơi lội",
+      "name": "Villa ngoài biển",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -193,9 +193,9 @@
       "status": false
     },
     {
-      "img": "https://mikazuki.com.vn/vnt_upload/product/08_2021/thumbs/1000__Deluxe___King_1.jpg",
+      "img": "https://images.pexels.com/photos/2417862/pexels-photo-2417862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "id": 4,
-      "name": "Bơi lội",
+      "name": "Villa có bể bơi",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,

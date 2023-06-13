@@ -1,0 +1,19 @@
+{
+  "book": [
+    {
+      "title": "Doraemon",
+      "quantity": "1001",
+      "id": 1
+    },
+    {
+      "title": "Pokemon",
+      "quantity": "10222",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Naruto",
+      "quantity": 150
+    }
+  ]
+}
