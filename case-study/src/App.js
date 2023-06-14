@@ -27,7 +27,7 @@ function App() {
                 <Route path={"/customer/edit/:id"}  element={<EditCustomer />}/>
                 <Route path={"/addFacility"} element={<AddFacility/>}/>
                 <Route path={"/facilityEdit/:id"} element={<EditFacility/>}/>
-                <Route path={"/facility-detail/${facilities.id}"} element={<Detail/>}/>
+                <Route path={"/facility-detail/:id"} element={<Detail/>}/>
                 <Route path={"/contract"} element={<ContractList/>}/>
                 <Route path={"/contract/create"} element={<AddContract/>}/>
                 <Route path={"/customer/addCustomer"} element={<AddCustomer/>}/>

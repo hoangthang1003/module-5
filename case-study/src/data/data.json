@@ -87,6 +87,17 @@
       "email": "13",
       "address": "123",
       "customerType": "1"
+    },
+    {
+      "id": 11,
+      "name": "123",
+      "dateOfBirth": "12",
+      "gender": "1",
+      "idCard": "132",
+      "phone": "13",
+      "email": "123",
+      "address": "123",
+      "customerType": "4"
     }
   ],
   "customerType": [
@@ -129,7 +140,7 @@
     {
       "img": "https://images.pexels.com/photos/53610/large-home-residential-house-architecture-53610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "id": 1,
-      "name": "Villa Vip",
+      "name": "Nhà nghỉ",
       "area": 100,
       "cost": 50,
       "maxPeople": 20,
@@ -137,10 +148,7 @@
         "id": 2,
         "name": "Gold"
       },
-      "rentType": {
-        "id": 1,
-        "name": "VND"
-      },
+      "rentType": 2,
       "standardRoom": "Twin bedroom",
       "description": "Tốt",
       "poolArea": 50,
@@ -159,10 +167,7 @@
         "id": 2,
         "name": "Gold"
       },
-      "rentType": {
-        "id": 1,
-        "name": "VND"
-      },
+      "rentType": 2,
       "standardRoom": "Twin bedroom",
       "description": "Tốt",
       "poolArea": 50,
@@ -181,10 +186,7 @@
         "id": 2,
         "name": "Gold"
       },
-      "rentType": {
-        "id": 1,
-        "name": "VND"
-      },
+      "rentType": 2,
       "standardRoom": "Twin bedroom",
       "description": "Tốt",
       "poolArea": 50,
@@ -203,40 +205,88 @@
         "id": 2,
         "name": "Gold"
       },
-      "rentType": {
-        "id": 1,
-        "name": "VND"
-      },
+      "rentType": 2,
       "standardRoom": "Twin bedroom",
       "description": "Tốt",
       "poolArea": 50,
       "numberOfFloors": 3,
       "facilityFree": "đồ bơi, kính bơi",
       "status": false
+    },
+    {
+      "img": "https://images.pexels.com/photos/1800387/pexels-photo-1800387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "name": "123",
+      "area": "123",
+      "cost": "132",
+      "maxPeople": "132",
+      "standard": "123",
+      "description": "123",
+      "poolArea": "123",
+      "numberOfFloors": "132",
+      "facilityFree": [
+        "Xe đạp",
+        "Bể bơi",
+        "Khu vui chơi",
+        "Buffet",
+        "Xe điện"
+      ],
+      "rentType": "3",
+      "facilityType": "3",
+      "id": 6
+    }
+  ],
+  "facilityFree": [
+    {
+      "id": 1,
+      "name": "Xe đạp"
+    },
+    {
+      "id": 2,
+      "name": "Bể bơi"
+    },
+    {
+      "id": 3,
+      "name": "Khu vui chơi"
+    },
+    {
+      "id": 4,
+      "name": "Buffet"
+    },
+    {
+      "id": 5,
+      "name": "Xe điện"
     }
   ],
   "facilityType": [
     {
       "id": 1,
-      "name": "Diamond"
+      "name": "Phòng trên biển"
     },
     {
       "id": 2,
-      "name": "Gold"
+      "name": "Nhà nghỉ"
     },
     {
       "id": 3,
-      "name": "Silver"
+      "name": "Villa tổng thống"
+    },
+    {
+      "id": 4,
+      "name": "Villa có bể bơi"
     }
   ],
   "rentType": [
     {
       "id": 1,
-      "name": "VND"
+      "name": "Ngày"
     },
     {
-      "id": 1,
-      "name": "USD"
+      "id": 2,
+      "name": "Tháng"
+    },
+    {
+      "id": 3,
+      "name": "Năm"
     }
   ],
   "contract": [
@@ -255,7 +305,7 @@
       "endDate": "10-03-2104",
       "idRoom": 3,
       "deposit": "10000000",
-      "total": "10000000"
+      "totalMoney": "10000000"
     }
   ]
 }

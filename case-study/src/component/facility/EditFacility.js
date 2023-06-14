@@ -1,25 +1,63 @@
-import { Component } from 'react'
+import {Component, useEffect, useState} from 'react'
 import React from "react";
-import { ErrorMessage, Field, Formik } from "formik";
+import {ErrorMessage, Field, Form, Formik} from "formik";
 import * as Yup from "yup";
-class FacilityEdit extends Component {
-    render() {
+import {useNavigate, useParams} from "react-router";
+import {facilityService} from "../../service/FacilityService";
+export function FacilityEdit(){
+    const [facilityTiesType, setFacilitiesType] = useState([])
+    const param = useParams()
+    const [facility,setFacility] = useState(null)
+    const [facilityTiesFrees, setFacilitiesFrees] = useState([])
+    const [facilityTiesRentTypes, setFacilityTiesRentTypes] = useState([])
+    const navigate = useNavigate();
+    const findAllType = async () => {
+        const result = await facilityService.findAllType()
+        setFacilitiesType(result)
+    }
+    const findById = async () => {
+        const res = await facilityService.findById(param.id)
+        setFacility(res)
+        console.log(facility)
+    }
+    const findAllRentType = async () => {
+        const result = await facilityService.findAllRentType()
+        setFacilityTiesRentTypes(result)
+    }
+
+    const findFacilityFree = async () => {
+        const result1 = await facilityService.findAllFacilitiesFree()
+        setFacilitiesFrees(result1)
+    }
+    useEffect(() => {
+        findById()
+        findAllType()
+        findFacilityFree()
+        findAllRentType()
+    }, [])
+
+    if(!facility){
+        return null
+    }
         return (
             <>
                 <Formik initialValues={{
-                    name: "",
-                    area: "",
-                    cost: "",
-                    maxPeople: "",
-                    standard: "",
-                    description: "",
-                    poolArea: "",
-                    numberOfFloors: "",
-                    facilityFree: "",
-                    rentType: [],
-                    facilityType: []
+                    img: facility?.img,
+                    name: facility?.name,
+                    area: facility?.area,
+                    cost: facility?.cost,
+                    maxPeople: facility?.maxPeople,
+                    standard: facility?.standard,
+                    description: facility?.description,
+                    poolArea: facility?.poolArea,
+                    numberOfFloors: facility?.numberOfFloors,
+                    facilityFree: facility?.facilityFree,
+                    rentType: facility?.rentType,
+                    facilityType: facility?.facilityType
                 }}
                         validationSchema={Yup.object({
+                            img: Yup.string()
+                                .required("Không được để trống"),
                             name: Yup.string()
                                 .required("Không được để trống"),
                             area: Yup.number()
@@ -39,13 +77,16 @@ class FacilityEdit extends Component {
                         })
                         }
                         onSubmit={(values) => {
-                            console.log(values)
+                            const update = async () => {
+                                await facilityService.updateFacility(param.id,values)
+                            }
+                            update()
+                            navigate("/facility")
                         }}>
-
                     <div>
                         <div className="p-3">
 
-                            <h2 className="text-center fw-bold">FACILITY CREATE</h2>
+                            <h2 className="text-center fw-bold">Sửa thông tin dịch vụ</h2>
                             <nav className="navbar navbar-expand-lg py-0 my-0">
                                 <div className="container-fluid">
 
@@ -54,162 +95,193 @@ class FacilityEdit extends Component {
                         </div>
 
 
-                        <form className="w-50 border border-2 border-success p-3 rounded ">
+                        <Form>
                             <div className="form-group">
-                                <label htmlFor="name" style={{ fontWeight: "bold" }}>
-                                    Tên:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="img" style={{fontWeight: "bold"}}>
+                                    Nhập ảnh minh họa:<span style={{color: "red"}}>*</span>
+                                </label>
+                                <div className="input-group">
+                                    <Field type="text" id="img" className="form-control" placeholder="Nhập img"
+                                           name="img"/>
+
+                                </div>
+                                <div>
+                                    <ErrorMessage name='img' component='span' className='form-err text-danger'/>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="name" style={{fontWeight: "bold"}}>
+                                    Tên:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="name" className="form-control" placeholder="Nhập tên"
-                                           name="name" />
+                                           name="name"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='name' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='name' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="area" style={{ fontWeight: "bold" }}>
-                                    Diện tích:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="area" style={{fontWeight: "bold"}}>
+                                    Diện tích:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="area" className="form-control" placeholder="Nhập diện tích"
-                                           name="area" />
+                                           name="area"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='area' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='area' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="cost" style={{ fontWeight: "bold" }}>
-                                    Giá tiền:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="cost" style={{fontWeight: "bold"}}>
+                                    Giá tiền:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="cost" className="form-control" placeholder="Nhập giá tiền"
-                                           name="cost" />
+                                           name="cost"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='cost' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='cost' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="maxPeople" style={{ fontWeight: "bold" }}>
-                                    Số người tối đa:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="maxPeople" style={{fontWeight: "bold"}}>
+                                    Số người tối đa:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="maxPeople" className="form-control"
-                                           placeholder="Nhập số người tối đa" name="maxPeople" />
+                                           placeholder="Nhập số người tối đa" name="maxPeople"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='maxPeople' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='maxPeople' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="standard" style={{ fontWeight: "bold" }}>
-                                    Tiêu chuẩn phòng:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="standard" style={{fontWeight: "bold"}}>
+                                    Tiêu chuẩn phòng:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="standard" className="form-control"
                                            placeholder="Tiêu chuẩn phòng"
-                                           name="standard" />
+                                           name="standard"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='standard' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='standard' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="description" style={{ fontWeight: "bold" }}>
-                                    Mô tả:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="description" style={{fontWeight: "bold"}}>
+                                    Mô tả:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="description" className="form-control"
-                                           placeholder="Nhập mô tả" name="description" />
+                                           placeholder="Nhập mô tả" name="description"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='description' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='description' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="poolArea" style={{ fontWeight: "bold" }}>
-                                    Diện tích hồ bơi:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="poolArea" style={{fontWeight: "bold"}}>
+                                    Diện tích hồ bơi:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="poolArea" className="form-control"
-                                           placeholder="Nhập diện tích hồ bơi" name="poolArea" />
+                                           placeholder="Nhập diện tích hồ bơi" name="poolArea"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='poolArea' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='poolArea' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="numberOfFloors" style={{ fontWeight: "bold" }}>
-                                    Số tầng:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="numberOfFloors" style={{fontWeight: "bold"}}>
+                                    Số tầng:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
                                     <Field type="text" id="numberOfFloors" className="form-control"
                                            placeholder="Nhập số tầng"
-                                           name="numberOfFloors" />
+                                           name="numberOfFloors"/>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='numberOfFloors' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='numberOfFloors' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="facilityFree" style={{ fontWeight: "bold" }}>
+                                <label htmlFor="facilityFree" style={{fontWeight: "bold"}}>
                                     Dịch vụ miễn phí:
                                 </label>
-                                <div className="input-group">
-                                    <Field type="text" id="facilityFree" className="form-control"
-                                           placeholder="Nhập dịch vụ miễn phí" name="facilityFree" />
+                                {
+                                    facilityTiesFrees.map((facilityTiesFree, index) =>
+                                        <>
+                                            <br/>
+                                            <Field type="checkbox" id={facilityTiesFree.id}
+                                                   value={facilityTiesFree.name} name="facilityFree" key={index}/>
+                                            <label>{facilityTiesFree.name}</label>
 
-                                </div>
+                                        </>
+                                    )
+                                }
+
+
                                 <div>
-                                    <ErrorMessage name='facilityFree' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='facilityFree' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="facilityType" style={{ fontWeight: "bold" }}>
-                                    Loại dịch vụ:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="facilityType" style={{fontWeight: "bold"}}>
+                                    Loại dịch vụ:<span style={{color: "red"}}>*</span>
                                 </label>
-                                <div className="input-group">
-                                    <select id="facilityType" className="form-control" name="facilityType">
-                                        <option />
-                                    </select>
+                                <div>
+                                    <Field as="select" id={facilityTiesType.id} className="form-control" name="facilityType">
+                                        {
+                                            facilityTiesType.map((facilityTiesFree, index) =>
+                                                <option value={facilityTiesFree.id}
+                                                        key={index}>{facilityTiesFree.name} </option>
+                                            )
+                                        }
+                                    </Field>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='facilityType' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='facilityType' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
                             <div className="mt-3 form-group">
-                                <label htmlFor="rentType" style={{ fontWeight: "bold" }}>
-                                    Kiểu thuê:<span style={{ color: "red" }}>*</span>
+                                <label htmlFor="rentType" style={{fontWeight: "bold"}}>
+                                    Kiểu thuê:<span style={{color: "red"}}>*</span>
                                 </label>
                                 <div className="input-group">
-                                    <select id="rentType" className="form-control" name="rentType">
-                                        <option />
-                                    </select>
+                                    <Field as="select" id={facilityTiesType.id} className="form-control" name="rentType">
+                                        {
+                                            facilityTiesRentTypes.map((facilityTiesRentType, index) =>
+                                                <option value={facilityTiesRentType.id}
+                                                        key={index}>{facilityTiesRentType.name} </option>
+                                            )
+                                        }
+                                    </Field>
 
                                 </div>
                                 <div>
-                                    <ErrorMessage name='rentType' component='span' className='form-err text-danger' />
+                                    <ErrorMessage name='rentType' component='span' className='form-err text-danger'/>
                                 </div>
                             </div>
 
@@ -219,13 +291,13 @@ class FacilityEdit extends Component {
                                     Save
                                 </button>
                             </div>
-                        </form>
+                        </Form>
                     </div>
 
                 </Formik>
 
             </>
         )
-    }
+
 }
 export default FacilityEdit;

@@ -5,11 +5,11 @@ import * as Yup from "yup";
 import {useNavigate} from "react-router";
 
 export function AddCustomer() {
-    const [customerTypes, setCustomerType] = useState([]);
+    const [customerTypes, setCustomerTypes] = useState([]);
     const navigate = useNavigate();
     const findAllType = async () => {
         const res = await customerService.findAllType()
-        setCustomerType(res)
+        setCustomerTypes(res)
 
     }
     useEffect(() => {
