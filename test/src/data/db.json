@@ -1,19 +1,96 @@
 {
-  "book": [
+  "product": [
     {
-      "title": "Doraemon",
-      "quantity": "1001",
-      "id": 1
+      "id": 1,
+      "idProduct": "PROP-0001",
+      "name": "Max queen",
+      "more": "Mới",
+      "productType": 1,
+      "price": 1000000,
+      "quantity": 10,
+      "date": "10/03/2022"
     },
     {
-      "title": "Pokemon",
-      "quantity": "10222",
-      "id": 2
+      "id": 2,
+      "idProduct": "PROP-0002",
+      "name": "Bomber",
+      "more": "Đẹp",
+      "productType": 2,
+      "price": 1000,
+      "quantity": 10,
+      "date": "10/03/2022"
     },
     {
       "id": 3,
-      "title": "Naruto",
-      "quantity": 150
+      "idProduct": "PROP-0003",
+      "name": "Tông",
+      "more": "Bền",
+      "productType": 1,
+      "price": 100000,
+      "quantity": 10,
+      "date": "10/03/2022"
+    },
+    {
+      "id": 4,
+      "idProduct": "PROP-0004",
+      "name": "Quần bò",
+      "more": "Mới",
+      "productType": 1,
+      "price": 10000,
+      "quantity": 10,
+      "date": "10/03/2022"
+    },
+    {
+      "idProduct": "sdaasd",
+      "name": "ád",
+      "more": "sad",
+      "productType": "2",
+      "price": "11",
+      "quantity": "11",
+      "date": "2023-06-08",
+      "id": 5
+    },
+    {
+      "idProduct": "ưeq",
+      "name": "qew",
+      "more": "eqw",
+      "productType": 1,
+      "price": "01",
+      "quantity": "111",
+      "date": "2023-06-16",
+      "id": 6
+    },
+    {
+      "idProduct": "qew",
+      "name": "qew",
+      "more": "w",
+      "productType": "3",
+      "price": "011",
+      "quantity": "011",
+      "date": "2023-06-07",
+      "id": 7
+    }
+  ],
+  "productType": [
+    {
+      "id": 1,
+      "name": "Giày",
+      "more": "Thoải mái"
+    },
+    {
+      "id": 2,
+      "name": "Áo",
+      "more": "Thoải mái"
+    },
+    {
+      "id": 3,
+      "name": "Dép",
+      "more": "Thoải mái"
+    },
+    {
+      "id": 4,
+      "name": "Quần",
+      "more": "Thoải mái"
     }
   ]
 }

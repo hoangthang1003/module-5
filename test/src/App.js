@@ -1,20 +1,21 @@
 import './App.css';
-import {BookList} from "./component/BookList";
-import {Route, Routes} from "react-router";
-import {AddBook} from "./component/AddBook";
-import {EditBook} from "./component/EditBook";
 import React from "react";
+import {Route, Routes} from "react-router";
+import {ProductList} from "./component/ProductList";
+import {AddProduct} from "./component/AddProduct";
+import {EditProduct} from "./component/EditProduct";
+
 
 function App() {
     return (
         <>
             <Routes>
-                <Route path={'/'} element={<BookList />} />
-                <Route path={'/add'} element={<AddBook />} />
-                <Route path={'/edit/:id'} element={<EditBook />} />
+                <Route path={"/"} element={<ProductList/>}/>
+                <Route path={"/addProduct"} element={<AddProduct/>}/>
+                <Route path={"/editProduct/:id"} element={<EditProduct/>}/>
             </Routes>
         </>
-    );
+    )
 }
 
 export default App;
