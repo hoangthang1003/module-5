@@ -3,15 +3,25 @@ import {Field, Form, Formik} from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import {customerService} from "../../service/CustomerService";
+import {facilityService} from "../../service/FacilityService";
+import {useNavigate} from "react-router";
 
 export function AddContract() {
+    const navigate = useNavigate()
     const [customerList, setCustomerList] = useState([])
-    const findAddCustomer = async () => {
+    const [facilityTypes, setFacilityTypes] = useState([])
+    const findAllCustomer = async () => {
         const res = await customerService.findAll()
         setCustomerList(res)
     }
+    const findAllFacility = async () => {
+        const res = await facilityService.findAllType()
+        setFacilityTypes(res)
+    }
+
     useEffect(() => {
-        findAddCustomer()
+        findAllCustomer()
+        findAllFacility()
     }, [])
     return (
         <>
@@ -28,43 +38,76 @@ export function AddContract() {
                         facility: Yup.string().required("Required"),
                         customer: Yup.string().required("Required"),
                         startDate: Yup.string().required("Required"),
+                        numberOfGuests: Yup.string().required("Required"),
                         endDate: Yup.string().required("Required"),
                         deposit: Yup.string().required("Required"),
                         totalMoney: Yup.string().required("Required"),
                     })}
 
                     onSubmit={values => {
+                        console.log(values)
                         const addContract = async () => {
-                            await axios.put(`http://localhost:2000/contract`, {...values})
+                            await axios.post(`http://localhost:2000/contract`, { ...values })
+                            navigate("/contract")
                         }
                         addContract()
                     }}>
                 <div className="contact-us">
                     <h1>Add Contract</h1>
                     <Form>
-                        <div><label htmlFor="idContract">Mã hợp đồng:</label>
-                            <Field type="text" id="idContract" name="idContract" required=""/>
+                        {/*<div>*/}
+                        {/*    <label htmlFor="idContract" style={{fontWeight: "bold"}} >Mã hợp đồng:</label>*/}
+                        {/*    <span style={{color: "red"}}>*</span>*/}
+                        {/*    <Field type="text" id="idContract" name="idContract" required="" className={"form-control"}/>*/}
+                        {/*</div>*/}
+                        <div>
+                            <label htmlFor="customer" style={{fontWeight: "bold"}} >Customer:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field as="select" id="customer" name="customer" required="" className={"form-control"}>
+                                {customerList.map((customer,index)=>
+                                    <option value={customer.id} key={index}>{customer.name}</option>
+                                )}
+                            </Field>
                         </div>
-                        <div><label htmlFor="customer">Customer:</label>
-                            <Field type="text" id="customer" name="customer" required=""/>
+                        <div>
+                            <label htmlFor="facility"  style={{fontWeight: "bold"}} >Facility:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field as="select" id="facility" name="facility" required="" className={"form-control"} >
+                                {facilityTypes.map((facility,index)=>
+                                    <option value={facility.id} key={index}>{facility.name}</option>
+                                )}
+                            </Field>
                         </div>
-                        <div><label htmlFor="numberOfGuests">Number Of Guests:</label>
-                            <Field type="text" id="numberOfGuests" name="numberOfGuests" required=""/>
+                        <div>
+                            <label htmlFor="numberOfGuests" style={{fontWeight: "bold"}} >Number Of Guests:</label>
+                            <span style={{color: "red"}}>*</span>
+
+                            <Field className={"form-control"} type="text" id="numberOfGuests" name="numberOfGuests" required=""/>
                         </div>
-                        <div><label htmlFor="startDay">Check In:</label>
-                            <Field type="date" id="startDay" name="startDay" required=""/>
+                        <div>
+                            <label htmlFor="startDay" style={{fontWeight: "bold"}} >Check In:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field className={"form-control"} type="text" id="startDay" name="startDay" required=""/>
                         </div>
-                        <div><label htmlFor="endDay">Check Out:</label>
-                            <Field type="date" id="endDay" name="endDay" required=""/>
+                        <div>
+                            <label htmlFor="endDay" style={{fontWeight: "bold"}} >Check Out:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field className={"form-control"} type="text" id="endDay" name="endDay" required=""/>
                         </div>
-                        <div><label htmlFor="deposit">Deposits:</label>
-                            <Field type="text" id="deposit" name="deposit" required=""/>
+                        <div>
+                            <label htmlFor="deposit" style={{fontWeight: "bold"}} >Deposits:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field className={"form-control"} type="text" id="deposit" name="deposit" required=""/>
                         </div>
-                        <div><label htmlFor="idRoom">Id Room:</label>
-                            <Field type="text" id="idRoom" name="idRoom" required=""/>
+                        <div>
+                            <label htmlFor="idRoom" style={{fontWeight: "bold"}} >Id Room:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field  className={"form-control"} type="text" id="idRoom" name="idRoom" required=""/>
                         </div>
-                        <div><label htmlFor="total">Tổng số tiền thanh toán:</label>
-                            <Field type="text" id="total" name="total" required=""/>
+                        <div>
+                            <label htmlFor="total" style={{fontWeight: "bold"}} >Tổng số tiền thanh toán:</label>
+                            <span style={{color: "red"}}>*</span>
+                            <Field className={"form-control"} type="text" id="total" name="total" required=""/>
                         </div>
 
 

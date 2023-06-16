@@ -29,9 +29,9 @@ export function ContractList() {
                 {
                     contracts.map((contract,index)=>(
                         <tr key={index}>
-                            <td>{contract.idContract}</td>
-                            <td>{contract.customer?.name}</td>
-                            <td>{contract.facility?.facilityName}</td>
+                            <td>{contract.id}</td>
+                            <td>{contract.customer}</td>
+                            <td>{contract.facility}</td>
                             <td>{contract.startDate}</td>
                             <td>{contract.endDate}</td>
                             <td>{contract.deposit}</td>

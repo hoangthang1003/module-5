@@ -1,0 +1,58 @@
+{
+  "book" : [
+    {
+      "id": 1,
+      "name": "Số đỏ",
+      "bookType": 1,
+      "quantity": 100,
+      "price": "1234"
+    },
+    {
+      "id": 2,
+      "name": "Doraemon",
+      "bookType": 2,
+      "quantity": 100,
+      "price": "4321"
+    },
+    {
+      "id": 3,
+      "name": "Dế mèn phiêu lưu ký",
+      "bookType": 3,
+      "quantity": 300,
+      "price": "4231"
+    },
+    {
+      "id": 4,
+      "name": "Conan",
+      "bookType": 2,
+      "quantity": 100,
+      "price": "2134"
+    },
+    {
+      "id": 5,
+      "name": "Tôi thấy hoa vàng trên cỏ xanh",
+      "bookType": 4,
+      "quantity": 10,
+      "price": "3241"
+    }
+  ],
+  "bookType": [
+    {
+      "id": 1,
+        "name": "Truyện chữ"
+    },
+    {
+      "id": 2,
+      "name": "Truyện tranh"
+    },
+    {
+      "id": 3,
+      "name": "Ký"
+    } ,
+    {
+      "id": 4,
+      "name": "Sách"
+    }
+
+  ]
+}

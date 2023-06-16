@@ -291,18 +291,12 @@
   ],
   "contract": [
     {
-      "idContract": 1,
-      "customer": {
-        "id": 1,
-        "name": "Rooney"
-      },
-      "facility": {
-        "id": 1,
-        "facilityName": "luxury room"
-      },
+      "id": 1,
+      "customer": 1,
+      "facility": 1,
       "numberOfGuests": 10,
-      "startDate": "10-03-2004",
-      "endDate": "10-03-2104",
+      "startDate": "10/03/2004",
+      "endDate": "10/03/2104",
       "idRoom": 3,
       "deposit": "10000000",
       "totalMoney": "10000000"

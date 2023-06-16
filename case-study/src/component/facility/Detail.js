@@ -1,5 +1,5 @@
 import {useParams} from "react-router";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {facilityService} from "../../service/FacilityService";
 
 export function Detail() {
@@ -22,7 +22,7 @@ return(
         <div>{facility.cost}</div>
         <div>{facility.maxPeople}</div>
         <div>{facility.facilityType?.name}</div>
-        <div>{facility.rentType?.name}</div>
+        <div>{facility.rentType}</div>
         <div>{facility.standardRoom}</div>
         <div>{facility.description}</div>
         <div>{facility.poolArea}</div>
